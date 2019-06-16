@@ -7,7 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XF.RestAPI.Android", "XF.Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XF.RestAPI.iOS", "XF.RestAPI\XF.RestAPI.iOS\XF.RestAPI.iOS.csproj", "{FE5A146F-5049-407D-8430-F205270337A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XF.RestAPI", "XF.RestAPI\XF.RestAPI\XF.RestAPI.csproj", "{E5E46188-BC58-4D42-A95F-62793615B732}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XF.RestAPI", "XF.RestAPI\XF.RestAPI\XF.RestAPI.csproj", "{E5E46188-BC58-4D42-A95F-62793615B732}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution Items", "_Solution Items", "{831E9169-FB7D-4CFF-89F8-7AFF68156AC0}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
