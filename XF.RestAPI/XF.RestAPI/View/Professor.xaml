@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XF.RestAPI.View.Professor"             
+             Title="Cadastrar">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salvar" CommandParameter="{Binding Professor}" 
+                     Command="{Binding OnSave}"
+                     Order="Primary" Priority="1" />
+        <ToolbarItem Text="Cancelar" Command="{Binding RedirectCancel}" CommandParameter="{Binding Professor}" Order="Primary" Priority="2" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Entry Placeholder="Informe seu nome" Text="{Binding Professor.Name}"/>
+            <Entry Placeholder="Informe seu título" Text="{Binding Professor.Title}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
