@@ -16,8 +16,8 @@
 
     <ContentPage.Content>
         <StackLayout Padding="10">
-            <Entry Placeholder="Informe seu nome" Text="{Binding Professor.Name}"/>
-            <Entry Placeholder="Informe seu título" Text="{Binding Professor.Title}"/>
+            <Entry Placeholder="Informe o nome" Text="{Binding Professor.Name}"/>
+            <Entry Placeholder="Informe o título" Text="{Binding Professor.Title}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
