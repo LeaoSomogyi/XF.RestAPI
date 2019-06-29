@@ -47,7 +47,8 @@ namespace XF.RestAPI.ViewModel
             RedirectCancel = new Command(Cancel);
             OnSave = new OnSaveCommand(this);
             OnRemove = new OnRemoveCommand(this);
-            OnEdit = new OnEditCommand(this);            
+            OnEdit = new OnEditCommand(this);
+            OnDetail = new OnDetailCommand(this);
         }
 
         #endregion
@@ -63,6 +64,8 @@ namespace XF.RestAPI.ViewModel
         public OnRemoveCommand OnRemove { get; set; }
 
         public OnEditCommand OnEdit { get; set; }
+
+        public OnDetailCommand OnDetail { get; set; }
 
         #endregion
 
@@ -101,6 +104,13 @@ namespace XF.RestAPI.ViewModel
             App.ProfessorVM.Professor = new Professor();
 
             App.Current.MainPage.Navigation.PushAsync(new View.Professor() { BindingContext = App.ProfessorVM });
+        }
+
+        public async void SendToDetails(Professor professor)
+        {
+            App.ProfessorVM.Professor = professor;
+
+            await App.Current.MainPage.Navigation.PushAsync(new View.Details() { BindingContext = App.ProfessorVM });
         }
 
         public void Cancel()

@@ -16,5 +16,12 @@ namespace XF.RestAPI.View
         {
             InitializeComponent();
         }
+
+        private async void lstProfessors_Refreshing(object sender, EventArgs e)
+        {
+            lstProfessors.IsRefreshing = true;
+            await App.ProfessorVM.LoadProfessors();
+            lstProfessors.IsRefreshing = false;
+        }
     }
 }

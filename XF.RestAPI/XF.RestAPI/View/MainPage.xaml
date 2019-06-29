@@ -17,13 +17,16 @@
             <StackLayout>
                 <SearchBar Placeholder="Pesquisar por nome" Text="{Binding SearchName}" />
             </StackLayout>
-            <ListView ItemsSource="{Binding Professors}">
+            <ListView x:Name="lstProfessors" ItemsSource="{Binding Professors}" Refreshing="lstProfessors_Refreshing" IsPullToRefreshEnabled="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.ContextActions>
                                 <MenuItem Text="Remover"
                                           Command="{Binding BindingContext.OnRemove, Source={x:Reference Name=pageMainPage}}"
+                                          CommandParameter="{Binding .}" />
+                                <MenuItem Text="Detalhes"
+                                          Command="{Binding BindingContext.OnDetail, Source={x:Reference Name=pageMainPage}}"
                                           CommandParameter="{Binding .}" />
                                 <MenuItem Text="Editar"
                                           Command="{Binding BindingContext.OnEdit, Source={x:Reference Name=pageMainPage}}"
